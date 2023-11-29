@@ -120,7 +120,7 @@ namespace speed
         private static void Timer()
         {
             time = 60;
-            while (testInPtogress) ;
+            do 
             {
                 Console.SetCursorPosition(20, 15);
                 Console.WriteLine("    ");
@@ -130,7 +130,8 @@ namespace speed
                 Thread.Sleep(1000);
                 time--;
                 if (time == 0) testInPtogress = false;
-            } 
+            } while (testInPtogress) ;
+            
         }
     }
 }
